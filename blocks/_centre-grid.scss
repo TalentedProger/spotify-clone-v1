@@ -1,0 +1,161 @@
+.header_centre_content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 15px;
+	padding-top: 30px;
+	padding-inline: 50px;
+	border-right: 1px solid rgba(211, 211, 211, 0.3);
+
+	@media (max-width:700px) {
+		border-right: none;
+		padding-inline: 10px;
+	}
+}
+.search_main {
+	position: relative;
+	background-color: rgba(0, 0, 0,0.5);
+	width: 100%;
+	border-radius: 30px;
+	margin: 0 auto;
+	border: 1px solid rgba(211, 211, 211,0.3);
+	margin-bottom: 50px;
+	transition: all 0.25s ease-in-out;
+}
+.search_main:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 12px, rgba(0, 0, 0, 0.22) 0px 8px 8px;
+}
+.search_main::before {
+	content: "";
+	position: absolute;
+	width: 22px;
+	aspect-ratio: 1;
+	background-image: url('./image/search-svgrepo-com.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translate(70%, 30%);
+}
+.search_all_placeholder {
+	width: 90%;
+	padding-inline: 5%;
+	padding-block: 5px;
+	color: white;
+	margin-left: 30px;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+::-webkit-input-placeholder {
+	color:#FFFFFF;
+	font-weight: 200;
+}
+.treanding_songs_header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	margin-bottom: 20px;
+	color: #FFFFFF;
+	gap: 20px;
+}
+
+.treanding_songs_title, .title_popular_artists,.title_recently_played{
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+}
+.see_all_played, .view_all_artists, .view_all_treanding {
+color: white;
+font-size: 16px;
+}
+.trending_songs_main {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	justify-content: space-between;
+	gap: 10px;
+
+	@media (max-width:700px) {
+		display: grid;
+		grid-template-columns: repeat(2,2fr);
+		row-gap: 30px;
+	}
+}
+.trending_songs_item {
+	position: relative;
+	margin: 0 auto;
+}
+.trending_song_information {
+	border-radius: 0px 0px 20px 20px;
+	position: absolute;
+	left: 0;
+	top: 76%;
+	background-color: transparent;
+	backdrop-filter: blur(20px);
+	color: white;
+	width: 100%;
+	min-height: 25%;
+	padding-inline: 10%;
+}
+.muz_name {
+	font-size: 12px;
+}
+.mus_artist {
+	font-size: 10px;
+}
+.trending_songs_cover {
+	width: 150px;
+	aspect-ratio: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	transition: all 0.2s ease-out;
+}
+.trending_songs_cover:hover  {
+	opacity: 0.6;
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.main_centre_artists {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.main_header_centre_atrists {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: #FFFFFF;
+}
+.main_popular_artists {
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width:700px) {
+		display: grid;
+		grid-template-columns: repeat(2,2fr);
+	}
+}
+.popular_artist_item {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 10px;
+}
+.popular_artist_cover {
+	width: 125px;
+	aspect-ratio: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 0 auto;
+}
+.popular_artist_name {
+	text-align: center;
+	text-wrap: nowrap;
+	color: white;
+	font-weight: 300;
+	font-style: italic;
+}
+

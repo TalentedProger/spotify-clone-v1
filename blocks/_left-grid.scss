@@ -1,0 +1,249 @@
+.left-grid-wrapper {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	font-weight: 300;
+	padding-left: 20px;
+	padding-top: 10px;
+	border-right: 1px solid rgba(211, 211, 211,0.3);
+
+	@media (max-width:700px) {
+		border-right: none;
+	}
+}
+.left-grid__collections {
+	@media (max-width:700px) {
+		padding-bottom: 25px;
+		border-bottom: 1px solid rgba(211,211,211,0.3);
+	}
+}
+.logo {
+	display: flex;
+}
+.left-grid__logo {
+	margin: 0 auto;
+}
+.noc_logo {
+	position: relative;
+	margin-left: 50px;
+	margin: 0 auto;
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 30px;
+	color: #8FBC8F;
+	&::after {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		width: 20px;
+		aspect-ratio: 1;
+		background-image: url('');
+	}
+}
+.left-grid__menu-title {
+	font-weight: 500;
+}
+.left-grid__list {
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-left: 10px;
+}
+.left-grid__item {
+	position: relative;
+	padding: 3px;
+	border-radius: 10px;
+	width: 90%;
+	transition: all 0.2s ease-out;
+	&:hover {
+		background-color: rgba(0, 0, 0,0.7);
+	}
+
+	&--home::after {
+		background-image: url('./image/home-filled-svgrepo-com.svg');
+	}
+
+	&--songs::after {
+		background-image: url('./image/music-svgrepo-com.svg');
+	}
+
+	&--artists::after {
+		background-image: url('./image/UserOutlined.svg');
+	}
+
+	&--albums::after {
+		background-image: url('./image/album-svgrepo-com.svg');
+	}
+
+	&--podcasts::after {
+		background-image: url('./image/podcast-svgrepo-com.svg');
+	}
+}
+
+.left-grid__item:after {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: translate(30%,50%);
+}
+.left-grid__item > a {
+	margin-left: 25px;
+}
+.left-menu_line {
+	background-color: rgba(211, 211, 211,0.3);
+	height: 1px;
+	margin-block: 25px;
+}
+
+.collections-menu {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+.collections-menu__title {
+	position: relative;
+	font-weight: 500;
+}
+.collections-menu__title > a {
+	margin-inline: 40px;
+}
+.collections-menu__title::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	background: url('./image/miscellaneous-collection-svgrepo-com.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	transform: translate(10%,10%);
+}
+.collections-menu__btn {
+	width: 20px;
+	height: 20px;
+	transform: translate(10%,10%);
+	background: url('./image/arrow-right-svgrepo-com.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.collections-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 30px;
+	padding-inline: 10px;
+}
+.collections-item {
+	display: flex;
+	gap: 20px;
+	transition: all 0.2s ease-out;
+	border-radius: 10px;
+	&:hover {
+		background-color: rgba(0, 0, 0,0.7);
+		border-radius: 10px;
+	}
+}
+.collections-item__image {
+	border-radius: 10px;
+}
+.collections-item__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	font-size: 14px;
+}
+.collections-item__name {
+	font-weight: 500;
+}
+.collections-item__type {
+	font-style: italic;
+}
+
+.create-new {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+
+	&__btn {
+		width: 20px;
+		height: 20px;
+		background-image: url('./image/plus-svgrepo-com.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		background-color: rgba(211, 211, 211,0.3);
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: 500;
+	}
+}
+.collections-item__image {
+	width: 50px;
+	height: 50px;
+}
+
+.collections-nav-btns {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding-right: 20px;
+
+	@media (max-width:700px) {
+		flex-direction: row;
+	}
+}
+
+.collections-btns__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	gap: 5px;
+	padding: 5px;
+	background-color: rgba(0, 0, 0,0.5);
+	border: 1px solid rgba(0, 0, 0,0.5);
+	background-color: rgba(255,255,255, 1);
+	color: black;
+	border-radius: 5px;
+	width: 80%;
+	text-wrap: nowrap;
+	transition: all 0.2s ease-out;
+	&:hover {
+		background-color: rgba(255,255,255,0.6);
+		box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	}
+
+	@media (max-width:700px) {
+		width: 50%;
+	}
+}
+.collections-btns__btn {
+		width: 15px;
+		height: 15px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+
+		&--create {
+			background-image: url('./image/plus-svgrepo-com.svg');
+		}
+		&--liked {
+			background-image: url('./image/HeartFilled.svg');
+		}
+}
+.collections-btns__title {
+	font-size: 14px;
+	font-weight: 300;
+}
